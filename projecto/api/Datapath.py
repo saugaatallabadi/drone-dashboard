@@ -89,36 +89,15 @@ def DataForDisplaying(whole_object, quantityOfObjects, objectsOnDisplay, Id, nam
     return totalCount, object_names_since_inception, totalIds
 
 
-def DataGathering(totalCount, object_names_since_inception, totalIds, whole_object, Data, Objects, quantityOfObjects, name_of_object):
+def DataGathering(totalCount, totalOfObjects, totalIds, wholeObject, Data, Objects, quantityOfObjects, nameOfObject):
+
+    a = []
+    for x in range(0, len(quantityOfObjects)):
+        a.append({nameOfObject[x]: quantityOfObjects[x]})
 
     for x in range(0, len(Data['trackerDataForLastFrame']['data'])):
 
-        whole_object.append({"object_names_since_inception": object_names_since_inception, "each_object_count_since_inception": totalCount, name_of_object[x]: quantityOfObjects[x],
-                             "objects_names_in_current_view": Objects, "object_count_in_current_view": len(Objects), "object_names_in_current_view": name_of_object, "each_object_count_in_current_view": quantityOfObjects})
+        wholeObject.append({"TotalOfObjects": totalOfObjects, "totalCountOfObjects": totalCount, "LiveTupleWithCount": a,  "AllObjectsInView": Objects,
+                            "TotalOfObjectsInView": len(Objects), "ObjectsInView": nameOfObject, "CountPerObjectInView": quantityOfObjects})
 
-        return whole_object
-
-
-#
-# def main():
-#
-#     # callSendToAzure()
-#     # initialize the SSE client
-#
-#     url = 'http://192.168.50.207:8080/tracker/sse'
-#     stream_response = requests.get(url, stream=True)
-#     client = sseclient.SSEClient(stream_response)
-#
-#     # this loops gets the data stream from the Jetson Nano
-#
-#     for event in client.events():
-#         # transform data into Json Format
-#         Data = json.loads(event.data)
-#         Objects, Id , x ,y, bearing,whole_object = Elements_In_Data(Data)
-#         quantityOfObjects, name_of_object = Number_Of_Objects(Objects)
-#         DataForDisplaying(whole_object,quantityOfObjects,name_of_object,Id,name_of_object,Objects)
-#         #TotalNumberOfObjects(newID,Objects,name_of_object)
-#         #SendToAzure.SendEvery("HostName=WellnessHub.azure-devices.net;DeviceId=Drone;SharedAccessKey=pbWAdY2W5QW2FJcCDJckZ6HAqF/ShM7DBpPWdNzg3pA=")
-#         print(name_of_object)
-#
-# main()
+        return wholeObject

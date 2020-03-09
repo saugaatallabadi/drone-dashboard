@@ -15,7 +15,7 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-
+# Raw data from the Jetson
 @app.route('/raw-data')
 def progress():
     def generate():
@@ -26,14 +26,15 @@ def progress():
         for event in client.events():
             # return event.data
             result = json.loads(event.data)
-            yield str(result['trackerDataForLastFrame']['data'][0]['bearing'])
-            time.sleep(0.5)
+            yield str(result)
+            # time.sleep(0.5)
 
     return Response(generate(), mimetype='text/event-stream')
 
 
-@app.route('/carlos-data')
-def carlos_data():
+# Gives list of all objects since inception (Name and Count)- In Progress
+@app.route('/ObjectCountSinceInception')
+def object_count_since_inception():
     def eventStream():
 
         object_names_since_inception = []
@@ -44,14 +45,14 @@ def carlos_data():
         while True:
             totalCount, object_names_since_inception, totalIds, whole_object = DataProcess.DroneLiveData(
                 object_names_since_inception, totalIds, totalCount)
-            # pprint.pprint(whole_object)
-            yield str(whole_object)
-            time.sleep(0.5)
+            yield str(whole_object[-1])
+            # time.sleep(1.0)
     return Response(eventStream(), mimetype='text/event-stream')
 
 
-@app.route('/saugaat-data')
-def saugaat_data():
+# Gives Id, NameOfObject, X, Y, Angle of the object
+@app.route('/id')
+def id():
     def eventStream2():
 
         object_names_since_inception = []
@@ -62,10 +63,47 @@ def saugaat_data():
         while True:
             totalCount, object_names_since_inception, totalIds, whole_object = DataProcess.DroneLiveData(
                 object_names_since_inception, totalIds, totalCount)
-            # pprint.pprint(whole_object)
-            yield str(whole_object)
-            time.sleep(0.5)
+            # All array elements except last element
+            yield str(whole_object[:-1])
+            # time.sleep(1.0)
     return Response(eventStream2(), mimetype='text/event-stream')
+
+
+# Gives list of all objects in live view (Name and Count)
+@app.route('/ObjectCountLiveView')
+def object_count_live_view():
+    def eventStream3():
+
+        object_names_since_inception = []
+        totalIds = []
+        totalCount = []
+        whole_object = []
+
+        while True:
+            totalCount, object_names_since_inception, totalIds, whole_object = DataProcess.DroneLiveData(
+                object_names_since_inception, totalIds, totalCount)
+            # Last array element
+            yield str(whole_object[-1]['LiveTupleWithCount'])
+            # time.sleep(1.0)
+
+    return Response(eventStream3(), mimetype='text/event-stream')
+
+# # Backup Route File to copy
+# @app.route('/carlos-data-backup')
+# def carlos_data_backup():
+#     def eventStream():
+
+#         object_names_since_inception = []
+#         totalIds = []
+#         totalCount = []
+#         whole_object = []
+
+#         while True:
+#             totalCount, object_names_since_inception, totalIds, whole_object = DataProcess.DroneLiveData(
+#                 object_names_since_inception, totalIds, totalCount)
+#             yield str(whole_object[-1])
+#             # time.sleep(0.5)
+#     return Response(eventStream(), mimetype='text/event-stream')
 
 
 if __name__ == "__main__":
