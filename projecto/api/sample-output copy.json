@@ -1,0 +1,42 @@
+[
+    {'ID': 12997, 'NameOfObject': 'tvmonitor', 'x': 558, 'y': 300, 'Angle': 112
+    },
+    {'ID': 13142, 'NameOfObject': 'tvmonitor', 'x': 427, 'y': 310, 'Angle': 181
+    },
+    {'ID': 13329, 'NameOfObject': 'tvmonitor', 'x': 213, 'y': 291, 'Angle': 142
+    },
+    {
+        'TotalOfObjects': ['tvmonitor'
+        ],
+        'totalCountOfObjects': [
+            3
+        ],
+        'AllObjectsInView': ['tvmonitor', 'tvmonitor', 'tvmonitor'
+        ],
+        'TotalOfObjectsInView': 3, 'ObjectsInView': ['tvmonitor'
+        ], 'CountPerObjectInView': [
+            3
+        ]
+    }
+]
+
+
+
+
+[
+    {'ID': 12997, 'NameOfObject': 'tvmonitor', 'x': 559, 'y': 300, 'Angle': 35
+    },
+    {'ID': 13142, 'NameOfObject': 'tvmonitor', 'x': 427, 'y': 310, 'Angle': 167
+    },
+    {'ID': 13329, 'NameOfObject': 'tvmonitor', 'x': 213, 'y': 291, 'Angle': 149
+    },
+    {'TotalOfObjects': ['tvmonitor'
+        ], 'totalCountOfObjects': [
+            3
+        ], 'AllObjectsInView': ['tvmonitor', 'tvmonitor', 'tvmonitor'
+        ], 'TotalOfObjectsInView': 3, 'ObjectsInView': ['tvmonitor'
+        ], 'CountPerObjectInView': [
+            3
+        ]
+    }
+]
