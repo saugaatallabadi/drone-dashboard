@@ -1,5 +1,3 @@
-# WORKS!!!
-
 import DataProcess
 import Datapath
 import json
@@ -35,21 +33,39 @@ def progress():
 
 
 @app.route('/carlos-data')
-def progress2():
+def carlos_data():
     def eventStream():
 
-        totalOfObjects = []
+        object_names_since_inception = []
         totalIds = []
         totalCount = []
-        wholeData = []
+        whole_object = []
 
         while True:
-            totalCount, totalOfObjects, totalIds, wholeData = DataProcess.DroneLiveData(
-                totalOfObjects, totalIds, totalCount)
-            # pprint.pprint(wholeData)
-            yield str(wholeData)
+            totalCount, object_names_since_inception, totalIds, whole_object = DataProcess.DroneLiveData(
+                object_names_since_inception, totalIds, totalCount)
+            # pprint.pprint(whole_object)
+            yield str(whole_object)
             time.sleep(0.5)
     return Response(eventStream(), mimetype='text/event-stream')
+
+
+@app.route('/saugaat-data')
+def saugaat_data():
+    def eventStream2():
+
+        object_names_since_inception = []
+        totalIds = []
+        totalCount = []
+        whole_object = []
+
+        while True:
+            totalCount, object_names_since_inception, totalIds, whole_object = DataProcess.DroneLiveData(
+                object_names_since_inception, totalIds, totalCount)
+            # pprint.pprint(whole_object)
+            yield str(whole_object)
+            time.sleep(0.5)
+    return Response(eventStream2(), mimetype='text/event-stream')
 
 
 if __name__ == "__main__":

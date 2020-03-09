@@ -1,18 +1,19 @@
 import DataProcess
 import pprint
 
-totalOfObjects = []
+object_names_since_inception = []
 totalIds = []
 totalCount = []
 wholeData = []
 
-totalCount, totalOfObjects, totalIds, wholeData = DataProcess.DroneLiveData(
-    totalOfObjects, totalIds, totalCount)
+totalCount, object_names_since_inception, totalIds, wholeData = DataProcess.DroneLiveData(
+    object_names_since_inception, totalIds, totalCount)
 
 while True:
-    print(DataProcess.DroneLiveData(totalOfObjects, totalIds, totalCount))
+    print(DataProcess.DroneLiveData(object-names -
+                                    since-inception, totalIds, totalCount))
 
     # pprint.pprint(DataProcess.DroneLiveData(
-    #     totalOfObjects, totalIds, totalCount))
+    #     object_names_since_inception, totalIds, totalCount))
     # totaDataProcess.DroneLiveData(
-    #     totalOfObjects, totalIds, totalCount))
+    #     object_names_since_inception, totalIds, totalCount))

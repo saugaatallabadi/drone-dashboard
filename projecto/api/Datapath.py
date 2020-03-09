@@ -1,6 +1,6 @@
 import json
 
-totalOfObjects = []
+object_names_since_inception = []
 totalIds = []
 totalCount = []
 
@@ -18,7 +18,7 @@ def Elements_In_Data(Data):
     horizontalAxis = []
     verticalAxis = []
     bearing = []
-    wholeObject = []
+    whole_object = []
 
     for x in range(0, len(Data['trackerDataForLastFrame']['data'])):
         Elements.append(Data['trackerDataForLastFrame']['data'][x]['name'])
@@ -26,14 +26,14 @@ def Elements_In_Data(Data):
         horizontalAxis.append(Data['trackerDataForLastFrame']['data'][x]['x'])
         verticalAxis.append(Data['trackerDataForLastFrame']['data'][x]['y'])
         bearing.append(Data['trackerDataForLastFrame']['data'][x]['bearing'])
-        wholeObject.append({"ID": Data['trackerDataForLastFrame']['data'][x]['id'],
-                            "NameOfObject": Data['trackerDataForLastFrame']['data'][x]['name'],
-                            "x": Data['trackerDataForLastFrame']['data'][x]['x'],
-                            "y": Data['trackerDataForLastFrame']['data'][x]['y'],
-                            "Angle": Data['trackerDataForLastFrame']['data'][x]['bearing']
-                            })
+        whole_object.append({"ID": Data['trackerDataForLastFrame']['data'][x]['id'],
+                             "name_of_object": Data['trackerDataForLastFrame']['data'][x]['name'],
+                             "x": Data['trackerDataForLastFrame']['data'][x]['x'],
+                             "y": Data['trackerDataForLastFrame']['data'][x]['y'],
+                             "Angle": Data['trackerDataForLastFrame']['data'][x]['bearing']
+                             })
 
-    return Elements, Id, horizontalAxis, verticalAxis, bearing, wholeObject
+    return Elements, Id, horizontalAxis, verticalAxis, bearing, whole_object
 
 
 def Number_Of_Objects(Objects):
@@ -54,7 +54,7 @@ def Number_Of_Objects(Objects):
     return numberOfObjects, objectType
 
 
-def DataForDisplaying(wholeObject, quantityOfObjects, objectsOnDisplay, Id, nameOfObject, Objects, totalCount, totalOfObjects, totalIds):
+def DataForDisplaying(whole_object, quantityOfObjects, objectsOnDisplay, Id, name_of_object, Objects, totalCount, object_names_since_inception, totalIds):
 
     differences = [item for item in Id if not item in totalIds]
     objectDiff = []
@@ -73,29 +73,30 @@ def DataForDisplaying(wholeObject, quantityOfObjects, objectsOnDisplay, Id, name
             objectDiff.append(Id.index(differences[x]))
 
         nameOfDiff = [
-            item for item in nameOfObject if not item in totalOfObjects]
+            item for item in name_of_object if not item in object_names_since_inception]
         if nameOfDiff:
             for x in nameOfDiff:
-                totalOfObjects.append(x)
+                object_names_since_inception.append(x)
             for x in objectDiff:
-                numberDiffLocation.append(totalOfObjects.index(Objects[x]))
+                numberDiffLocation.append(
+                    object_names_since_inception.index(Objects[x]))
             for x in range(0, len(nameOfDiff)):
                 totalCount.append(0)
             for x in range(0, len(differences)):
                 totalCount[numberDiffLocation[x]
                            ] = totalCount[numberDiffLocation[x]]+1
 
-    return totalCount, totalOfObjects, totalIds
+    return totalCount, object_names_since_inception, totalIds
 
 
-def DataGathering(totalCount, totalOfObjects, totalIds, wholeObject, Data, Objects, quantityOfObjects, nameOfObject):
+def DataGathering(totalCount, object_names_since_inception, totalIds, whole_object, Data, Objects, quantityOfObjects, name_of_object):
 
     for x in range(0, len(Data['trackerDataForLastFrame']['data'])):
 
-        wholeObject.append({"TotalOfObjects": totalOfObjects, "totalCountOfObjects": totalCount,
-                            "AllObjectsInView": Objects, "TotalOfObjectsInView": len(Objects), "ObjectsInView": nameOfObject, "CountPerObjectInView": quantityOfObjects})
+        whole_object.append({"object_names_since_inception": object_names_since_inception, "each_object_count_since_inception": totalCount, name_of_object[x]: quantityOfObjects[x],
+                             "objects_names_in_current_view": Objects, "object_count_in_current_view": len(Objects), "object_names_in_current_view": name_of_object, "each_object_count_in_current_view": quantityOfObjects})
 
-        return wholeObject
+        return whole_object
 
 
 #
@@ -113,11 +114,11 @@ def DataGathering(totalCount, totalOfObjects, totalIds, wholeObject, Data, Objec
 #     for event in client.events():
 #         # transform data into Json Format
 #         Data = json.loads(event.data)
-#         Objects, Id , x ,y, bearing,wholeObject = Elements_In_Data(Data)
-#         quantityOfObjects, nameOfObject = Number_Of_Objects(Objects)
-#         DataForDisplaying(wholeObject,quantityOfObjects,nameOfObject,Id,nameOfObject,Objects)
-#         #TotalNumberOfObjects(newID,Objects,nameOfObject)
+#         Objects, Id , x ,y, bearing,whole_object = Elements_In_Data(Data)
+#         quantityOfObjects, name_of_object = Number_Of_Objects(Objects)
+#         DataForDisplaying(whole_object,quantityOfObjects,name_of_object,Id,name_of_object,Objects)
+#         #TotalNumberOfObjects(newID,Objects,name_of_object)
 #         #SendToAzure.SendEvery("HostName=WellnessHub.azure-devices.net;DeviceId=Drone;SharedAccessKey=pbWAdY2W5QW2FJcCDJckZ6HAqF/ShM7DBpPWdNzg3pA=")
-#         print(nameOfObject)
+#         print(name_of_object)
 #
 # main()

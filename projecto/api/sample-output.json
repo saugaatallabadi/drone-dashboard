@@ -1,174 +1,266 @@
 [
-    {'ID': 14909, 'NameOfObject': 'tvmonitor', 'x': 316, 'y': 162, 'Angle': 297
+    {'ID': 14909, 'name_of_object': 'tvmonitor', 'x': 316, 'y': 162, 'Angle': 297
     },
-    {'TotalOfObjects': ['tvmonitor'
-        ], 'totalCountOfObjects': [
+    {'object_names_since_inception': ['tvmonitor'
+        ], 'each_object_count_since_inception': [
             1
-        ], 'AllObjectsInView': ['tvmonitor'
-        ], 'TotalOfObjectsInView': 1, 'ObjectsInView': ['tvmonitor'
-        ], 'CountPerObjectInView': [
+        ], 'objects_names_in_current_view': ['tvmonitor'
+        ], 'object_count_in_current_view': 1, 'object_names_in_current_view': ['tvmonitor'
+        ], 'each_object_count_in_current_view': [
             1
         ]
     }
 ][
-    {'ID': 14909, 'NameOfObject': 'tvmonitor', 'x': 316, 'y': 162, 'Angle': 169
+    {'ID': 14909, 'name_of_object': 'tvmonitor', 'x': 316, 'y': 162, 'Angle': 169
     },
-    {'TotalOfObjects': ['tvmonitor'
-        ], 'totalCountOfObjects': [
+    {'object_names_since_inception': ['tvmonitor'
+        ], 'each_object_count_since_inception': [
             1
-        ], 'AllObjectsInView': ['tvmonitor'
-        ], 'TotalOfObjectsInView': 1, 'ObjectsInView': ['tvmonitor'
-        ], 'CountPerObjectInView': [
+        ], 'objects_names_in_current_view': ['tvmonitor'
+        ], 'object_count_in_current_view': 1, 'object_names_in_current_view': ['tvmonitor'
+        ], 'each_object_count_in_current_view': [
             1
         ]
     }
 ][
-    {'ID': 14909, 'NameOfObject': 'tvmonitor', 'x': 317, 'y': 162, 'Angle': 74
+    {'ID': 14909, 'name_of_object': 'tvmonitor', 'x': 317, 'y': 162, 'Angle': 74
     },
-    {'TotalOfObjects': ['tvmonitor'
-        ], 'totalCountOfObjects': [
+    {'object_names_since_inception': ['tvmonitor'
+        ], 'each_object_count_since_inception': [
             1
-        ], 'AllObjectsInView': ['tvmonitor'
-        ], 'TotalOfObjectsInView': 1, 'ObjectsInView': ['tvmonitor'
-        ], 'CountPerObjectInView': [
+        ], 'objects_names_in_current_view': ['tvmonitor'
+        ], 'object_count_in_current_view': 1, 'object_names_in_current_view': ['tvmonitor'
+        ], 'each_object_count_in_current_view': [
             1
         ]
     }
 ][
-    {'ID': 14909, 'NameOfObject': 'tvmonitor', 'x': 316, 'y': 162, 'Angle': 243
+    {'ID': 14909, 'name_of_object': 'tvmonitor', 'x': 316, 'y': 162, 'Angle': 243
     },
-    {'TotalOfObjects': ['tvmonitor'
-        ], 'totalCountOfObjects': [
+    {'object_names_since_inception': ['tvmonitor'
+        ], 'each_object_count_since_inception': [
             1
-        ], 'AllObjectsInView': ['tvmonitor'
-        ], 'TotalOfObjectsInView': 1, 'ObjectsInView': ['tvmonitor'
-        ], 'CountPerObjectInView': [
-            1
-        ]
-    }
-][
-    {'ID': 14909, 'NameOfObject': 'tvmonitor', 'x': 317, 'y': 162, 'Angle': 94
-    },
-    {'TotalOfObjects': ['tvmonitor'
-        ], 'totalCountOfObjects': [
-            1
-        ], 'AllObjectsInView': ['tvmonitor'
-        ], 'TotalOfObjectsInView': 1, 'ObjectsInView': ['tvmonitor'
-        ], 'CountPerObjectInView': [
+        ], 'objects_names_in_current_view': ['tvmonitor'
+        ], 'object_count_in_current_view': 1, 'object_names_in_current_view': ['tvmonitor'
+        ], 'each_object_count_in_current_view': [
             1
         ]
     }
 ][
-    {'ID': 14909, 'NameOfObject': 'tvmonitor', 'x': 317, 'y': 162, 'Angle': 317
+    {'ID': 14909, 'name_of_object': 'tvmonitor', 'x': 317, 'y': 162, 'Angle': 94
     },
-    {'ID': 14933, 'NameOfObject': 'person', 'x': 121, 'y': 160, 'Angle': 44
+    {'object_names_since_inception': ['tvmonitor'
+        ], 'each_object_count_since_inception': [
+            1
+        ], 'objects_names_in_current_view': ['tvmonitor'
+        ], 'object_count_in_current_view': 1, 'object_names_in_current_view': ['tvmonitor'
+        ], 'each_object_count_in_current_view': [
+            1
+        ]
+    }
+][
+    {'ID': 14909, 'name_of_object': 'tvmonitor', 'x': 317, 'y': 162, 'Angle': 317
     },
-    {'TotalOfObjects': ['tvmonitor', 'person'
-        ], 'totalCountOfObjects': [
+    {'ID': 14933, 'name_of_object': 'person', 'x': 121, 'y': 160, 'Angle': 44
+    },
+    {'object_names_since_inception': ['tvmonitor', 'person'
+        ], 'each_object_count_since_inception': [
             1,
             1
-        ], 'AllObjectsInView': ['tvmonitor', 'person'
-        ], 'TotalOfObjectsInView': 2, 'ObjectsInView': ['tvmonitor', 'person'
-        ], 'CountPerObjectInView': [
-            1,
-            1
-        ]
-    }
-][
-    {'ID': 14909, 'NameOfObject': 'tvmonitor', 'x': 317, 'y': 162, 'Angle': 40
-    },
-    {'ID': 14933, 'NameOfObject': 'person', 'x': 169, 'y': 155, 'Angle': 13
-    },
-    {'TotalOfObjects': ['tvmonitor', 'person'
-        ], 'totalCountOfObjects': [
-            1,
-            1
-        ], 'AllObjectsInView': ['tvmonitor', 'person'
-        ], 'TotalOfObjectsInView': 2, 'ObjectsInView': ['tvmonitor', 'person'
-        ], 'CountPerObjectInView': [
+        ], 'objects_names_in_current_view': ['tvmonitor', 'person'
+        ], 'object_count_in_current_view': 2, 'object_names_in_current_view': ['tvmonitor', 'person'
+        ], 'each_object_count_in_current_view': [
             1,
             1
         ]
     }
 ][
-    {'ID': 14909, 'NameOfObject': 'tvmonitor', 'x': 316, 'y': 161, 'Angle': 137
+    {'ID': 14909, 'name_of_object': 'tvmonitor', 'x': 317, 'y': 162, 'Angle': 40
     },
-    {'ID': 14933, 'NameOfObject': 'person', 'x': 184, 'y': 161, 'Angle': 6
+    {'ID': 14933, 'name_of_object': 'person', 'x': 169, 'y': 155, 'Angle': 13
     },
-    {'ID': 14935, 'NameOfObject': 'person', 'x': 187, 'y': 114, 'Angle': 352
-    },
-    {'TotalOfObjects': ['tvmonitor', 'person'
-        ], 'totalCountOfObjects': [
+    {'object_names_since_inception': ['tvmonitor', 'person'
+        ], 'each_object_count_since_inception': [
             1,
             1
-        ], 'AllObjectsInView': ['tvmonitor', 'person', 'person'
-        ], 'TotalOfObjectsInView': 3, 'ObjectsInView': ['tvmonitor', 'person'
-        ], 'CountPerObjectInView': [
+        ], 'objects_names_in_current_view': ['tvmonitor', 'person'
+        ], 'object_count_in_current_view': 2, 'object_names_in_current_view': ['tvmonitor', 'person'
+        ], 'each_object_count_in_current_view': [
+            1,
+            1
+        ]
+    }
+][
+    {'ID': 14909, 'name_of_object': 'tvmonitor', 'x': 316, 'y': 161, 'Angle': 137
+    },
+    {'ID': 14933, 'name_of_object': 'person', 'x': 184, 'y': 161, 'Angle': 6
+    },
+    {'ID': 14935, 'name_of_object': 'person', 'x': 187, 'y': 114, 'Angle': 352
+    },
+    {'object_names_since_inception': ['tvmonitor', 'person'
+        ], 'each_object_count_since_inception': [
+            1,
+            1
+        ], 'objects_names_in_current_view': ['tvmonitor', 'person', 'person'
+        ], 'object_count_in_current_view': 3, 'object_names_in_current_view': ['tvmonitor', 'person'
+        ], 'each_object_count_in_current_view': [
             1,
             2
         ]
     }
 ][
-    {'ID': 14909, 'NameOfObject': 'tvmonitor', 'x': 316, 'y': 162, 'Angle': 336
+    {'ID': 14909, 'name_of_object': 'tvmonitor', 'x': 316, 'y': 162, 'Angle': 336
     },
-    {'ID': 14933, 'NameOfObject': 'person', 'x': 195, 'y': 172, 'Angle': 334
+    {'ID': 14933, 'name_of_object': 'person', 'x': 195, 'y': 172, 'Angle': 334
     },
-    {'ID': 14935, 'NameOfObject': 'person', 'x': 224, 'y': 118, 'Angle': 354
+    {'ID': 14935, 'name_of_object': 'person', 'x': 224, 'y': 118, 'Angle': 354
     },
-    {'TotalOfObjects': ['tvmonitor', 'person'
-        ], 'totalCountOfObjects': [
+    {'object_names_since_inception': ['tvmonitor', 'person'
+        ], 'each_object_count_since_inception': [
             1,
             1
-        ], 'AllObjectsInView': ['tvmonitor', 'person', 'person'
-        ], 'TotalOfObjectsInView': 3, 'ObjectsInView': ['tvmonitor', 'person'
-        ], 'CountPerObjectInView': [
+        ], 'objects_names_in_current_view': ['tvmonitor', 'person', 'person'
+        ], 'object_count_in_current_view': 3, 'object_names_in_current_view': ['tvmonitor', 'person'
+        ], 'each_object_count_in_current_view': [
             1,
             2
         ]
     }
 ][
-    {'ID': 14909, 'NameOfObject': 'tvmonitor', 'x': 315, 'y': 159, 'Angle': 99
+    {'ID': 14909, 'name_of_object': 'tvmonitor', 'x': 315, 'y': 159, 'Angle': 99
     },
-    {'ID': 14936, 'NameOfObject': 'person', 'x': 261, 'y': 152, 'Angle': 356
+    {'ID': 14936, 'name_of_object': 'person', 'x': 261, 'y': 152, 'Angle': 356
     },
-    {'TotalOfObjects': ['tvmonitor', 'person'
-        ], 'totalCountOfObjects': [
+    {'object_names_since_inception': ['tvmonitor', 'person'
+        ], 'each_object_count_since_inception': [
             1,
             1
-        ], 'AllObjectsInView': ['tvmonitor', 'person'
-        ], 'TotalOfObjectsInView': 2, 'ObjectsInView': ['tvmonitor', 'person'
-        ], 'CountPerObjectInView': [
-            1,
-            1
-        ]
-    }
-][
-    {'ID': 14909, 'NameOfObject': 'tvmonitor', 'x': 313, 'y': 161, 'Angle': 172
-    },
-    {'ID': 14936, 'NameOfObject': 'person', 'x': 273, 'y': 157, 'Angle': 344
-    },
-    {'TotalOfObjects': ['tvmonitor', 'person'
-        ], 'totalCountOfObjects': [
-            1,
-            1
-        ], 'AllObjectsInView': ['tvmonitor', 'person'
-        ], 'TotalOfObjectsInView': 2, 'ObjectsInView': ['tvmonitor', 'person'
-        ], 'CountPerObjectInView': [
+        ], 'objects_names_in_current_view': ['tvmonitor', 'person'
+        ], 'object_count_in_current_view': 2, 'object_names_in_current_view': ['tvmonitor', 'person'
+        ], 'each_object_count_in_current_view': [
             1,
             1
         ]
     }
 ][
-    {'ID': 14909, 'NameOfObject': 'tvmonitor', 'x': 316, 'y': 160, 'Angle': 325
+    {'ID': 14909, 'name_of_object': 'tvmonitor', 'x': 313, 'y': 161, 'Angle': 172
     },
-    {'TotalOfObjects': ['tvmonitor', 'person'
-        ], 'totalCountOfObjects': [
+    {'ID': 14936, 'name_of_object': 'person', 'x': 273, 'y': 157, 'Angle': 344
+    },
+    {'object_names_since_inception': ['tvmonitor', 'person'
+        ], 'each_object_count_since_inception': [
             1,
             1
-        ], 'AllObjectsInView': ['tvmonitor'
-        ], 'TotalOfObjectsInView': 1, 'ObjectsInView': ['tvmonitor'
-        ], 'CountPerObjectInView': [
+        ], 'objects_names_in_current_view': ['tvmonitor', 'person'
+        ], 'object_count_in_current_view': 2, 'object_names_in_current_view': ['tvmonitor', 'person'
+        ], 'each_object_count_in_current_view': [
+            1,
             1
+        ]
+    }
+][
+    {'ID': 14909, 'name_of_object': 'tvmonitor', 'x': 316, 'y': 160, 'Angle': 325
+    },
+    {'object_names_since_inception': ['tvmonitor', 'person'
+        ], 'each_object_count_since_inception': [
+            1,
+            1
+        ], 'objects_names_in_current_view': ['tvmonitor'
+        ], 'object_count_in_current_view': 1, 'object_names_in_current_view': ['tvmonitor'
+        ], 'each_object_count_in_current_view': [
+            1
+        ]
+    }
+]
+
+
+[
+    {'ID': 15529, 'name_of_object': 'tvmonitor', 'x': 316, 'y': 161, 'Angle': 243
+    },
+    {'object_names_since_inception': ['tvmonitor'
+        ], 'each_object_count_since_inception': [
+            1
+        ], 'tvmonitor': 1, 'objects_names_in_current_view': ['tvmonitor'
+        ], 'object_count_in_current_view': 1, 'object_names_in_current_view': ['tvmonitor'
+        ], 'each_object_count_in_current_view': [
+            1
+        ]
+    }
+][
+    {'ID': 15529, 'name_of_object': 'tvmonitor', 'x': 316, 'y': 161, 'Angle': 231
+    },
+    {'object_names_since_inception': ['tvmonitor'
+        ], 'each_object_count_since_inception': [
+            1
+        ], 'tvmonitor': 1, 'objects_names_in_current_view': ['tvmonitor'
+        ], 'object_count_in_current_view': 1, 'object_names_in_current_view': ['tvmonitor'
+        ], 'each_object_count_in_current_view': [
+            1
+        ]
+    }
+]
+
+
+[
+    {'ID': 15559, 'name_of_object': 'tvmonitor', 'x': 316, 'y': 161, 'Angle': 143
+    },
+    {'ID': 15560, 'name_of_object': 'person', 'x': 374, 'y': 158, 'Angle': 112
+    },
+    {'ID': 15561, 'name_of_object': 'tvmonitor', 'x': 188, 'y': 162, 'Angle': 331
+    },
+    {'object_names_since_inception': ['tvmonitor', 'person'
+        ], 'each_object_count_since_inception': [
+            1,
+            1
+        ], 'tvmonitor': 1, 'objects_names_in_current_view': ['tvmonitor', 'person', 'tvmonitor'
+        ], 'object_count_in_current_view': 3, 'object_names_in_current_view': ['tvmonitor', 'person'
+        ], 'each_object_count_in_current_view': [
+            2,
+            1
+        ]
+    }
+]
+
+
+
+
+
+
+
+
+
+
+[
+    {'ID': 15660, 'name_of_object': 'person', 'x': 309, 'y': 159, 'Angle': 169
+    },
+    {'ID': 15662, 'name_of_object': 'tvmonitor', 'x': 186, 'y': 161, 'Angle': None
+    },
+    {'object_names_since_inception': ['tvmonitor', 'person'
+        ], 'each_object_count_since_inception': [
+            1,
+            2
+        ], 'person': 1, 'objects_names_in_current_view': ['person', 'tvmonitor'
+        ], 'object_count_in_current_view': 2, 'object_names_in_current_view': ['person', 'tvmonitor'
+        ], 'each_object_count_in_current_view': [
+            1,
+            1
+        ]
+    }
+][
+    {'ID': 15660, 'name_of_object': 'person', 'x': 297, 'y': 157, 'Angle': 169
+    },
+    {'ID': 15664, 'name_of_object': 'person', 'x': 251, 'y': 159, 'Angle': 175
+    },
+    {'ID': 15665, 'name_of_object': 'person', 'x': 81, 'y': 201, 'Angle': 206
+    },
+    {'object_names_since_inception': ['tvmonitor', 'person'
+        ], 'each_object_count_since_inception': [
+            1,
+            2
+        ], 'person': 3, 'objects_names_in_current_view': ['person', 'person', 'person'
+        ], 'object_count_in_current_view': 3, 'object_names_in_current_view': ['person'
+        ], 'each_object_count_in_current_view': [
+            3
         ]
     }
 ]

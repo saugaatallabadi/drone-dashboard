@@ -4,7 +4,7 @@ import Datapath
 import requests
 
 
-def DroneLiveData(totalOfObjects, totalIds, totalCount):
+def DroneLiveData(object_names_since_inception, totalIds, totalCount):
 
     url = 'http://192.168.50.207:8080/tracker/sse'
     stream_response = requests.get(url, stream=True)
@@ -15,12 +15,12 @@ def DroneLiveData(totalOfObjects, totalIds, totalCount):
     for event in client.events():
         # transform data into Json Format
         Data = json.loads(event.data)
-        Objects, Id, x, y, bearing, wholeObject = Datapath.Elements_In_Data(
+        Objects, Id, x, y, bearing, whole_object = Datapath.Elements_In_Data(
             Data)
-        quantityOfObjects, nameOfObject = Datapath.Number_Of_Objects(Objects)
-        totalCount, totalOfObjects, totalIds = Datapath.DataForDisplaying(
-            wholeObject, quantityOfObjects, nameOfObject, Id, nameOfObject, Objects, totalCount, totalOfObjects, totalIds)
-        wholeObject = Datapath.DataGathering(
-            totalCount, totalOfObjects, totalIds, wholeObject, Data, Objects, quantityOfObjects, nameOfObject)
+        quantityOfObjects, name_of_object = Datapath.Number_Of_Objects(Objects)
+        totalCount, object_names_since_inception, totalIds = Datapath.DataForDisplaying(
+            whole_object, quantityOfObjects, name_of_object, Id, name_of_object, Objects, totalCount, object_names_since_inception, totalIds)
+        whole_object = Datapath.DataGathering(
+            totalCount, object_names_since_inception, totalIds, whole_object, Data, Objects, quantityOfObjects, name_of_object)
 
-        return totalCount, totalOfObjects, totalIds, wholeObject
+        return totalCount, object_names_since_inception, totalIds, whole_object
