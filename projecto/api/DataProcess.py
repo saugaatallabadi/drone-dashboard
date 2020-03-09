@@ -3,11 +3,6 @@ import json
 import Datapath
 import requests
 
-totalOfObjects = []
-totalIds = []
-totalCount = []
-wholeData = []
-
 
 def DroneLiveData(totalOfObjects, totalIds, totalCount):
 
