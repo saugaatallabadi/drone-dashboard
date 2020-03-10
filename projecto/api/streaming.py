@@ -3,6 +3,7 @@ import Datapath
 import json
 import pprint
 import requests
+import response
 import sseclient  # pip install sseclient-py
 import flask
 from flask import request, jsonify, Flask, render_template, Response, stream_with_context
@@ -20,6 +21,7 @@ def index():
 def progress():
     def generate():
         url = 'http://192.168.50.207:8080/tracker/sse'
+
         stream_response = requests.get(url, stream=True)
         client = sseclient.SSEClient(stream_response)
 
@@ -29,7 +31,12 @@ def progress():
             yield str(result)
             # time.sleep(0.5)
 
-    return Response(generate(), mimetype='text/event-stream')
+    resp = Response(generate(), mimetype='text/event-stream')
+    resp.headers['Connection'] = 'keep-alive'
+    # resp.headers['Transfer-Encoding'] = 'chunked'
+    resp.headers['Cache-Control'] = 'no-cache'
+    resp.headers['X-Powered-By'] = 'Express'
+    return resp
 
 
 # Gives list of all objects since inception (Name and Count)- In Progress
@@ -45,9 +52,9 @@ def object_count_since_inception():
         while True:
             totalCount, object_names_since_inception, totalIds, whole_object = DataProcess.DroneLiveData(
                 object_names_since_inception, totalIds, totalCount)
-            yield str(whole_object[-1])
+            yield str(json.dumps(whole_object[-1]))
             # time.sleep(1.0)
-    return Response(eventStream(), mimetype='text/event-stream')
+    return Response(eventStream(), mimetype='text/event-stream',)
 
 
 # Gives Id, NameOfObject, X, Y, Angle of the object
@@ -64,7 +71,8 @@ def id():
             totalCount, object_names_since_inception, totalIds, whole_object = DataProcess.DroneLiveData(
                 object_names_since_inception, totalIds, totalCount)
             # All array elements except last element
-            yield str(whole_object[:-1])
+            # Use json.dumps to add double quotes to the JSON data
+            yield str(json.dumps(whole_object[:-1]))
             # time.sleep(1.0)
     return Response(eventStream2(), mimetype='text/event-stream')
 
@@ -83,7 +91,7 @@ def object_count_live_view():
             totalCount, object_names_since_inception, totalIds, whole_object = DataProcess.DroneLiveData(
                 object_names_since_inception, totalIds, totalCount)
             # Last array element
-            yield str(whole_object[-1]['LiveTupleWithCount'])
+            yield str(json.dumps(whole_object[-1]['LiveTupleWithCount']))
             # time.sleep(1.0)
 
     return Response(eventStream3(), mimetype='text/event-stream')
@@ -107,4 +115,4 @@ def object_count_live_view():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0')
